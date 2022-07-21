@@ -1,0 +1,9 @@
+<mvc:View controllerName="sap.ui.demo.worklist.controller.App" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<Shell id="shell" appWidthLimited="false">
+		<App width="100%" id="app" busy="{appView>/busy}" busyIndicatorDelay="{appView>/delay}"/>
+	</Shell>
+
+</mvc:View>
