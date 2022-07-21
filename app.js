@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path');
-const Scheduler = require('./src/scheduler.ts');
+const scheduler = require('./src/scheduler.ts');
 
 app = express()
 
@@ -11,3 +11,5 @@ app.use(express.urlencoded());
 app.listen(3002, () => {
     console.log('listening');
 })
+
+let Scheduler
