@@ -1,5 +1,5 @@
 {
-  "files": ["src/main.ts", "src/scheduler.ts", "src/data.ts"],
+  "files": ["src/main.ts", "src/scheduler.ts", "src/data.ts", "src/trainer.ts", "src/dealer.ts"],
   "compilerOptions": {
     "baseUrl": "./src",
     "target": "es6" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,

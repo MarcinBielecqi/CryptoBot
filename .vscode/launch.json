@@ -1,20 +1,23 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
+            "name": "Debug",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
+            "program": "${workspaceRoot}/dist/main.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
             ],
-            "program": "${workspaceFolder}\\src\\scheduler.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
         }
     ]
 }

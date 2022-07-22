@@ -1,5 +1,7 @@
 import Binance from "node-binance-api";
-
+import Data from "./data";
+import Trainer from "./trainer";
+import Dealer from "./dealer";
 const Settings = require("../settings/settings");
 
 export class Scheduler {
@@ -7,13 +9,13 @@ export class Scheduler {
     APIKEY: Settings.API_KEY,
     APISECRET: Settings.API_SECRET,
   });
+  data = new Data(this.binance);
+  trainer = new Trainer(2000, this.data);
+  dealer = new Dealer(1000, this.data, this.trainer);
+
 
   run() {
-    let that = this;
-    that.binance.candlesticks("BTCUSDT", "3m", (error, ticks, symbol) => {
-      if (error) console.error(error);
-      else console.log(ticks);
-    }, { limit: 1000 }
-    );
+    // this.dealer.dealerLoop();
+    this.trainer.trainerLoop();
   }
 }
